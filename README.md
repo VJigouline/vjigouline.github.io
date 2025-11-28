@@ -1,3 +1,4 @@
 # vjigouline.github.io
 
-[Index] (./index.html)
+[Index] (./index.html)  
+[SceneEditor](./SceneEditor/index.html)

@@ -1,4 +1,123 @@
-<h1>Test GitHub pages</h1>
-<p>This is a test page for GitHub Pages deployment.</p>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vladimir Jigouline – MeerCAD projects</title>
+  <meta name="description" content="SceneEditor, a three.js scene editor in the browser, and the MeerCAD TypeScript libraries for STEP, IFC and Ogre import, ray tracing, and CAD curves, surfaces and solids.">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --surface: #f6f8fa;
+      --text: #1f2328;
+      --muted: #59636e;
+      --border: #d1d9e0;
+      --accent: #0969da;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0d1117;
+        --surface: #151b23;
+        --text: #e6edf3;
+        --muted: #9198a1;
+        --border: #3d444d;
+        --accent: #4493f8;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    main { max-width: 52rem; margin: 0 auto; padding: 3rem 1rem 4rem; }
+    h1 { margin: 0 0 0.5rem; font-size: 2rem; line-height: 1.2; }
+    h2 { margin: 2.5rem 0 1rem; font-size: 1.25rem; }
+    p { margin: 0 0 1rem; }
+    .lead { color: var(--muted); font-size: 1.0625rem; }
+    a { color: var(--accent); }
+    .actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 1.5rem 0 0; }
+    .button {
+      display: inline-block; padding: 0.5rem 1rem; border: 1px solid var(--border);
+      border-radius: 0.5rem; background: var(--surface); color: var(--text);
+      font-weight: 600; text-decoration: none;
+    }
+    .button.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+    ul.projects { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--border); }
+    ul.projects li { padding: 0.875rem 0; border-bottom: 1px solid var(--border); }
+    .name { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-weight: 600; }
+    .summary { display: block; color: var(--muted); }
+    .links { display: block; font-size: 0.9375rem; }
+    footer { margin-top: 3rem; color: var(--muted); font-size: 0.875rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>MeerCAD projects</h1>
+    <p class="lead">
+      Open-source tools for 3D and CAD in the browser by Vladimir Jigouline:
+      SceneEditor, a three.js scene editor, and the TypeScript libraries it is built on.
+    </p>
+    <div class="actions">
+      <a class="button primary" href="https://vjigouline.github.io/SceneEditor/">Open SceneEditor</a>
+      <a class="button" href="https://vjigouline.github.io/MeerCADWeb/">MeerCAD site</a>
+      <a class="button" href="https://github.com/VJigouline">GitHub</a>
+    </div>
 
-<p>Visit <a href="https://vjigouline.github.io/SceneEditor">Scene editor</a> to see it in action.</p>
+    <h2>SceneEditor</h2>
+    <ul class="projects">
+      <li>
+        <a class="name" href="https://github.com/VJigouline/SceneEditor">SceneEditor</a>
+        <span class="summary">A three.js scene editor that runs in the browser. Opens glTF, Collada, STL, STEP, IFC and Ogre models, edits their lights and materials, and renders photorealistic images.</span>
+        <span class="links"><a href="https://vjigouline.github.io/SceneEditor/">Open it</a> · <a href="https://github.com/VJigouline/SceneEditor/wiki">User guide</a></span>
+      </li>
+    </ul>
+
+    <h2>Libraries inside SceneEditor</h2>
+    <ul class="projects">
+      <li>
+        <a class="name" href="https://github.com/VJigouline/mc-step-import">mc-step-import</a>
+        <span class="summary">Reads STEP (AP203, AP214, AP242) files into three.js, tessellating B-rep solids into watertight meshes.</span>
+        <span class="links"><a href="https://github.com/VJigouline/mc-step-import/tree/main/Documentation">Documentation</a></span>
+      </li>
+      <li>
+        <a class="name" href="https://github.com/VJigouline/mc-ifc-import">mc-ifc-import</a>
+        <span class="summary">Reads IFC building models (IFC2X3 and the IFC4 line) into three.js, with the spatial structure and property sets.</span>
+        <span class="links"><a href="https://github.com/VJigouline/mc-ifc-import/tree/main/Documentation">Documentation</a></span>
+      </li>
+      <li>
+        <a class="name" href="https://github.com/VJigouline/mc-ogre-import">mc-ogre-import</a>
+        <span class="summary">Reads Ogre 3D meshes, material scripts and dotScene scenes, loose or zipped, into three.js, with materials, textures, lights and cameras.</span>
+        <span class="links"><a href="https://github.com/VJigouline/mc-ogre-import/tree/main/Documentation">Documentation</a></span>
+      </li>
+      <li>
+        <a class="name" href="https://github.com/VJigouline/mc-raytracer">mc-raytracer</a>
+        <span class="summary">Ray traces three.js scenes with shadows, reflections and global illumination, progressively in Web Workers.</span>
+        <span class="links"><a href="https://github.com/VJigouline/mc-raytracer/tree/main/Documentation">Documentation</a></span>
+      </li>
+    </ul>
+
+    <h2>CAD geometry</h2>
+    <ul class="projects">
+      <li>
+        <a class="name" href="https://github.com/VJigouline/mc-curves">mc-curves</a>
+        <span class="summary">CAD curves: lines, conics, splines, NURBS and more, behind one curve interface.</span>
+        <span class="links"><a href="https://github.com/VJigouline/mc-curves/tree/main/Documentation">Documentation</a></span>
+      </li>
+      <li>
+        <a class="name" href="https://github.com/VJigouline/mc-surfaces">mc-surfaces</a>
+        <span class="summary">CAD surfaces: planes, quadrics, NURBS, and swept, lofted and blended surfaces. Built on mc-curves.</span>
+        <span class="links"><a href="https://github.com/VJigouline/mc-surfaces/tree/main/Documentation">Documentation</a></span>
+      </li>
+      <li>
+        <a class="name" href="https://github.com/VJigouline/mc-solids">mc-solids</a>
+        <span class="summary">CAD solids in boundary representation, with booleans, sections and mass properties. Built on mc-surfaces.</span>
+        <span class="links"><a href="https://github.com/VJigouline/mc-solids/tree/main/Documentation">Documentation</a></span>
+      </li>
+    </ul>
+
+    <footer>All projects are open source under the MIT licence.</footer>
+  </main>
+</body>
+</html>
